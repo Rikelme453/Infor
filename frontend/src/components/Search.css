@@ -20,9 +20,3 @@
     top: 8%;
     border: 1px solid #ccc;
 }
-
-.scrollable-list {
-    max-height: 200px; /* ajuste a altura máxima conforme necessário */
-    overflow-y: auto;
-  }
-  
