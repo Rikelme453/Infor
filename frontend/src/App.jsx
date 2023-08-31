@@ -7,8 +7,9 @@ function App() {
   return (
 
     <>
+      
       <div>
-        <header className='Header_page'>
+        <header>
           <div className="header">
             <a id="navText" className="navbar-brand" href="base.html">INFOR HOME</a>
             <ul class="suggestions">
