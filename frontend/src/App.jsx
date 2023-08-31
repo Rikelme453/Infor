@@ -5,6 +5,7 @@ import './App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
+
 function App() {
 
   return (
@@ -22,6 +23,7 @@ function App() {
                 <FontAwesomeIcon icon={faSearch} className='lupa' />
 
               </div>
+
 
             </ul>
             <p class="navPg">Seja Bem-vindo!</p>
