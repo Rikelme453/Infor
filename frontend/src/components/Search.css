@@ -19,4 +19,16 @@
     top: 8%;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    display: none;
+}
+
+.classe_show{
+    background-color: rgb(255, 255, 255);
+    width: 25%;
+    position: absolute;
+    left: 35%;
+    top: 8%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: block;
 }

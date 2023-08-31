@@ -7,7 +7,8 @@ function Search() {
   const [data, setData] = useState([]);
   const [text, setText] = useState('');
   const [filtName, setFiltName] = useState('');
-
+  const [classe, setClasse] = useState('sugestoes')
+ 
   useEffect(() => {
     fetchData();
   }, [text]);
@@ -33,25 +34,21 @@ function Search() {
 
   const handleItemClick = (itemName) => {
     setFiltName(itemName);
-    console.log("test")
-
   };
 
   const itensFilt = data.filter(item =>
     item.nome.toLowerCase().includes(filtName.toLowerCase())
   );
 
-  const escurecer = () => {
-    console.log("test")
-  }
+    
 
   return (
     <div className="APP">
-      <input type="search" placeholder="Procure seus produtos..." value={filtName} onChange={searched} onClick={escurecer} className="Search-bar"></input>
+      <input type="search" placeholder="Procure seus produtos..." value={filtName} onChange={searched}  className="Search-bar"></input>
       
-      <div className="sugestoes">
+      <div className={classe}>
       <ul>
-        {filtName.length > 0 && itensFilt && itensFilt.map(el => <li key={el.id} onClick={() => handleItemClick(el.nome)} className="listas"> {el.nome}</li>)}
+        {itensFilt && itensFilt.map(el => <li key={el.id} onClick={() => handleItemClick(el.nome)} className="listas"> {el.nome}</li>)}
       </ul>
       </div>
     </div>
