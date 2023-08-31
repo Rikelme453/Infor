@@ -23,7 +23,7 @@ function App() {
             <div className="SubNav">
               <a href="#">Categorias</a>
               <a href="#">Carrinho</a>
-              <a href="./pages/loja.html">loja</a>
+              <a href="#">loja</a>
               <a href="#">Contato</a>
               <a href="#">Quem Somos?</a>
             </div>
