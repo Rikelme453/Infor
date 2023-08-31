@@ -50,9 +50,15 @@ body{
 
 .suggestions{
     background-color: white;
-    
 }
 
+.navPg{
+    color: white;
+    position: absolute;
+    margin-left: 66%;
+    font-family: Muli, sans-serif;
+    margin-top: 1.75%;
+} 
 
 #lupa{
     margin-left: 57%;
@@ -91,12 +97,6 @@ body{
     
 }
 
-.navPg{
-    color: white;
-    position: absolute;
-    margin-left: 66%;
-    font-family: Muli, sans-serif;
-}
 
 .link{
     float: left;
@@ -105,8 +105,9 @@ body{
     text-decoration: none;
     margin-top: 1.25%;
     z-index: 1;
-    margin-left: 66%;
+    margin-left: 65%;
     font-family: Muli, sans-serif;
+    padding: 25px;
 
 }
 .link a{
