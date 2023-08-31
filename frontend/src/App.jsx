@@ -19,6 +19,7 @@ function App() {
               <a href="#">Entrar |</a>
               <a href="%">Cadastrar</a>
             </div>
+            </div>
             <div className="SubNav">
               <a href="#">Categorias</a>
               <a href="#">Carrinho</a>
