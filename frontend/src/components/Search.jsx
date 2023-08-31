@@ -41,13 +41,19 @@ function Search() {
     item.nome.toLowerCase().includes(filtName.toLowerCase())
   );
 
+  const escurecer = () => {
+    console.log("test")
+  }
+
   return (
     <div className="APP">
-      <input type="search" placeholder="Procure seus produtos..." value={filtName} onChange={searched} className="Search-bar"></input>
+      <input type="search" placeholder="Procure seus produtos..." value={filtName} onChange={searched} onClick={escurecer} className="Search-bar"></input>
+      
+      <div className="sugestoes">
       <ul>
         {filtName.length > 0 && itensFilt && itensFilt.map(el => <li key={el.id} onClick={() => handleItemClick(el.nome)} className="listas"> {el.nome}</li>)}
-
       </ul>
+      </div>
     </div>
   );
 }
