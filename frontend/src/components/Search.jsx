@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import './Search.css'
 
 function Search() {
   const url = 'http://127.0.0.1:8000/api/produtos/';
@@ -32,7 +33,8 @@ function Search() {
 
   const handleItemClick = (itemName) => {
     setFiltName(itemName);
-    setText(itemName);
+    console.log("test")
+
   };
 
   const itensFilt = data.filter(item =>
@@ -43,7 +45,8 @@ function Search() {
     <div className="APP">
       <input type="search" placeholder="Procure seus produtos..." value={filtName} onChange={searched} className="Search-bar"></input>
       <ul>
-        {filtName.length > 0 && itensFilt && itensFilt.map(el => <li key={el.id}> {el.nome}</li>)}
+        {filtName.length > 0 && itensFilt && itensFilt.map(el => <li key={el.id} onClick={() => handleItemClick(el.nome)} className="listas"> {el.nome}</li>)}
+
       </ul>
     </div>
   );

@@ -1,0 +1,17 @@
+.listas {
+    font-size: 20px;
+    font-family: sans-serif;
+    color: rgb(60, 60, 60);
+    list-style: none;
+    cursor: pointer;
+    
+}
+
+.listas:hover {
+    background-color: rgb(148, 148, 148);
+}
+
+.Sugests{
+    width: 25%;
+    position: absolute;
+}
