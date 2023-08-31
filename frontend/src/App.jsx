@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <h1>tet</h1>
+      <h1>test</h1>
     </>
   )
 }
