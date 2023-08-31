@@ -2,6 +2,7 @@ import React from 'react';
 import Search from './components/search';
 import './App.css'
 
+
 function App() {
   return (
 
@@ -11,7 +12,7 @@ function App() {
           <div className="header">
             <a id="navText" className="navbar-brand" href="base.html">INFOR HOME</a>
             <ul class="suggestions">
-              <Search />
+              <Search /> 
             </ul>
             <p class="navPg">Seja Bem-vindo!</p>
             <div class="link">
