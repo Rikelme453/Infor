@@ -13,14 +13,18 @@ function App() {
             <ul class="suggestions">
               <Search />
             </ul>
-          </div>
-          <div className="SubNav">
-            <a href="#">Categorias</a>
-            <a href="#">Carrinho</a>
-            <a href="#">loja</a>
-            <a href="#">Contato</a>
-            <a href="#">Quem Somos?</a>
-          </div>
+            <p class="navPg">Seja Bem-vindo!</p>
+            <div class="link">
+              <a href="#">Entrar |</a>
+              <a href="%">Cadastrar</a>
+            </div>
+            <div className="SubNav">
+              <a href="#">Categorias</a>
+              <a href="#">Carrinho</a>
+              <a href="#">loja</a>
+              <a href="#">Contato</a>
+              <a href="#">Quem Somos?</a>
+            </div>
         </header>
       </div>
     </>
