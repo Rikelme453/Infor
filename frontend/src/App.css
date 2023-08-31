@@ -140,6 +140,19 @@ body{
     
 }
 
-.Header_page{
-    background-color: red;
+.lupa{
+    width: 70%;
+    height: 70%;
+}
+
+.lupa_div{
+    position: relative;
+    left: 58.5%;
+    top: 4.5vh;
+    z-index: 3;
+    color: #0D6EFD;
+    font-size: 1.2em;
+    background-color: #ffffff;
+    width: 2%;
+    cursor: pointer;
 }
