@@ -4,15 +4,17 @@ import './App.css'
 
 
 function App() {
+  
   return (
 
     <>
+      
       <div>
-        <header className='Header_page'>
+        <header>
           <div className="header">
             <a id="navText" className="navbar-brand" href="base.html">INFOR HOME</a>
             <ul class="suggestions">
-              <Search /> 
+              <Search />
             </ul>
             <p class="navPg">Seja Bem-vindo!</p>
             <div class="link">
@@ -27,6 +29,7 @@ function App() {
               <a href="#">Contato</a>
               <a href="#">Quem Somos?</a>
             </div>
+            
         </header>
       </div>
     </>

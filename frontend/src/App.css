@@ -103,7 +103,7 @@ body{
     text-decoration: none;
     margin-top: 1.25%;
     z-index: 1;
-    margin-left: 65%;
+    margin-left: 64.39%;
     font-family: Muli, sans-serif;
     padding: 25px;
 
@@ -140,3 +140,6 @@ body{
     
 }
 
+.Header_page{
+    background-color: red;
+}
