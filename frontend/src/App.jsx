@@ -10,7 +10,7 @@ function App() {
         <header>
           <div className="header">
             <a id="navText" className="navbar-brand" href="base.html">INFOR HOME</a>
-            <ul>
+            <ul class="suggestions">
               <Search />
             </ul>
           </div>
