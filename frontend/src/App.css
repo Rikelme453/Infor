@@ -127,11 +127,8 @@ body {
      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); 
      display: flex;
      z-index: 1;
-     
-
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
     display: flex;
-    z-index: -1;
 }
 .SubNav a {
     position: relative;
