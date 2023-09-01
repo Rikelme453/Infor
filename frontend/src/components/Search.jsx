@@ -65,7 +65,7 @@ function Search() {
 
   return (
     <div className="APP" ref={searchWrapperRef}>
-      <input
+      <input 
         type="text"
         placeholder="Procure seus produtos..."
         value={filtName}
