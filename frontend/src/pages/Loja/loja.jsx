@@ -6,7 +6,11 @@ function Loja(){
     <>
         
      <div>
-         <h1>Página Loja</h1>
+              
+         <body>
+              <h1>Página da Loja</h1>
+         </body>      
+              
      </div>
     
     </>
