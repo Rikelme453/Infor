@@ -2,6 +2,9 @@ import './Footer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import img from '../assets/face.svg'
+import img2 from '../assets/insta.svg'
+import img3 from '../assets/twi.svg'
+import img4 from '../assets/lin.svg'
 
 function Footer(){
     return(
@@ -10,10 +13,10 @@ function Footer(){
             <footer>
 <div class="footer">
 <div class="row">
-<a href="#"><img src={img} alt="" draggable="false" className='img1'/></a>
-<a href="#"><i class="fa fa-instagram"></i></a>
-<a href="#"><i class="fa fa-youtube"></i></a>
-<a href="#"><i class="fa fa-twitter"></i></a>
+<a href="#"><i><img src={img} alt="" draggable="false"/></i></a>
+<a href="#"><i><img src={img2} alt="" draggable="false"/></i></a>
+<a href="#"><i><img src={img3} alt="" draggable="false"/></i></a>
+<a href="#"><i><img src={img4} alt="" draggable="false"/></i></a>
 </div>
 
 <div class="row">
