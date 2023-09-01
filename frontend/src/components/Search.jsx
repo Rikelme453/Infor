@@ -19,7 +19,7 @@ function Search({ onClick }) {
     function handleClickOutside(event) {
       if (searchWrapperRef.current && !searchWrapperRef.current.contains(event.target)) {
         setShowSuggestions(false);
-        onClick();
+        onClick(); // Chama a função onClick para remover o escurecimento
       }
     }
 
@@ -53,7 +53,7 @@ function Search({ onClick }) {
   const handleItemClick = (itemName) => {
     setFiltName(itemName);
     setShowSuggestions(false);
-    onClick(); 
+    onClick(); // Chama a função onClick para remover o escurecimento
   };
 
   const itensFilt = data.filter(item =>
@@ -62,7 +62,7 @@ function Search({ onClick }) {
 
   return (
     <div className="APP" ref={searchWrapperRef}>
-      <input 
+      <input
         type="text"
         placeholder="Procure seus produtos..."
         value={filtName}
