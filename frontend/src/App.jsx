@@ -2,13 +2,17 @@ import React from 'react';
 import Search from './components/Search.jsx';
 import './App.css'
 
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faCartShopping, faSearch, faUser } from '@fortawesome/free-solid-svg-icons';
 
 
 function App() {
+  
 
   return (
+
+    
 
     <>
 
@@ -16,13 +20,13 @@ function App() {
         <header>
           <div className="header">
             <a id="navText" className="navbar-brand" href="base.html">INFOR HOME</a>
-            <ul class="suggestions">
+            <ul className="suggestions">
               <Search />
                 <FontAwesomeIcon icon={faSearch} className='lupa' />
             </ul>
             <FontAwesomeIcon icon={faUser} className='user'/> 
-            <p class="navPg">Seja Bem-vindo!</p>
-            <div class="link">
+            <p className="navPg">Seja Bem-vindo!</p>
+            <div className="link">
               <a href="#">Entrar |  </a>
               <a href="%">Cadastrar</a>
             </div>
