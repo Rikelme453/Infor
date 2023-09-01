@@ -1,20 +1,24 @@
-* {
+*{
     padding: 0;
     margin: 0;
 }
 
-body {
+body{
     padding: 0;
     margin: 0;
 }
 
-.header {
+.header{
     background-color: #0066ff;
     height: 12vh;
     margin-top: -0.5vh;
 }
 
-#navText {
+#navbar{
+    z-index: 1;
+}
+
+#navText{
     display: block;
     font-size: 2em;
     margin-block-start: 0.05em;
@@ -27,11 +31,11 @@ body {
     font-family: sans-serif;
     text-decoration: none;
     position: absolute;
-    margin-top: 1.75%;
+    margin-top: 29.5px;
 
 }
 
-.Search-bar {
+.Search-bar{
     position: absolute;
     padding: 10px 5px;
     border-radius: 5px;
@@ -41,46 +45,65 @@ body {
     margin-left: 35%;
     z-index: 2;
     outline: none;
-    margin-top: 1.75%;
+    margin-top: 27px;
 }
 
 
 
-.navPg {
+.navPg{
     color: white;
     position: absolute;
     margin-left: 66%;
     font-family: Muli, sans-serif;
-    margin-top: 1.75%;
+    margin-top: 30px;
+} 
+
+.link{
+    position: absolute;
+    text-decoration: none;
+    margin-top: 43px;
+    z-index: 1;
+    margin-left: 65.37%;
+    font-family: Muli, sans-serif;
+    padding: 10px;
+
+
+}
+.link a{
+    color: white;
+    text-decoration: none;
 }
 
-#lupa {
-    margin-left: 57%;
+.lupa{
+    margin-left: 58.5%;
     cursor: pointer;
     z-index: 2;
     position: absolute;
-    color: #0066ff;
+    color: #0D6EFD;
     z-index: 41;
+    margin-top: 37px;
+    font-size: 1.35em;
 
 }
-
-#cart {
+.cart{
     margin-left: 80%;
     cursor: pointer;
     z-index: 2;
     position: absolute;
-    color: #ffffff;
-    font-size: 35px;
+    color: #ffffff; 
+    font-size: 42px;
+    margin-top: 29px;
 }
 
-#user {
+.user{
     position: absolute;
     margin-left: 63%;
-    font-size: 40px;
+    font-size: 42px;
     color: white;
+    margin-top: 27px;
 }
 
-#cat {
+.cat{
     position: relative;
     display: flex;
     justify-content: center;
@@ -89,43 +112,22 @@ body {
     text-decoration: none;
     color: #0D6EFD;
     font-size: 16px;
-
+    
 }
 
 
-.link {
-    float: left;
-    text-align: center;
-    position: absolute;
-    text-decoration: none;
-    margin-top: 1.25%;
-    z-index: 1;
-    margin-left: 64.39%;
-    font-family: Muli, sans-serif;
-    padding: 25px;
-
-}
-
-.link a {
-    color: white;
-    text-decoration: none;
-}
-
-.SubNav {
+.SubNav{ 
     position: absolute;
     width: 100%;
-    height: 50px;
+    height: 50px; 
     background-color: #ffffff;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
-    display: flex;
-
+     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); 
+     display: flex;
+     z-index: -10;
+     
 }
 
-.SubNav1 {
-    z-index: -1;
-}
-
-.SubNav a {
+.SubNav a{
     position: relative;
     display: flex;
     justify-content: center;
@@ -138,33 +140,5 @@ body {
     z-index: 1;
     font-family: Muli, sans-serif;
 
-
-}
-
-.lupa {
-    width: 70%;
-    height: 70%;
-}
-
-.lupa_div {
-    position: relative;
-    left: 58.5%;
-    top: 4.5vh;
-    z-index: 3;
-    color: #0D6EFD;
-    font-size: 1.2em;
-    background-color: #ffffff;
-    width: 2%;
-    cursor: pointer;
-}
-
-.Body-claro {
-    transition: background-color 0.3s ease-in-out;
-    background-color: #fff;
-    height: 100vh;
-}
-
-.Body-escuro {
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 10;
+    
 }
