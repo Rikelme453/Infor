@@ -10,7 +10,7 @@ function Footer(){
             <footer>
 <div class="footer">
 <div class="row">
-<a href="#"><img src={img} alt="" draggable="false" /></a>
+<a href="#"><img src={img} alt="" draggable="false" className='img1'/></a>
 <a href="#"><i class="fa fa-instagram"></i></a>
 <a href="#"><i class="fa fa-youtube"></i></a>
 <a href="#"><i class="fa fa-twitter"></i></a>
