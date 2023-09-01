@@ -144,4 +144,15 @@ body {
     font-family: Muli, sans-serif;
 }
 
+/* Loja Css */
+
+.ProdutoDiv{
+     background-color: #0066ff;
+     margin: 1%;
+     width: 20%;
+     height: 200px;
+}
+
+ 
+
 
