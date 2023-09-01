@@ -5,7 +5,7 @@
     color: rgb(0, 0, 0);
     list-style: none;
     cursor: pointer;
-    
+    padding: 10px;
 }
 
 .listas:hover {
@@ -14,15 +14,25 @@
 
 .sugestoes{
     background-color: rgb(255, 255, 255);
-    width: 25%;
+    width: 25.5%;
     position: absolute;
     left: 35%;
     top: 8%;
     border: 1px solid #ccc;
     font-size: 18px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    z-index: 1;
 }
 
 .Search-bar{
     font-size: 18px;
+    border: none;
+    box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.2); 
+    z-index: 3;
 }
 
+.scrollable {
+    max-height: 150px;
+    overflow-y: scroll;
+  }
