@@ -1,5 +1,6 @@
 import React from 'react';
 import Search from './components/Search.jsx';
+import Footer from './components/footer.jsx';
 import './App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
@@ -45,6 +46,7 @@ function App() {
 
         </header>
       </div>
+      <Footer />
     <br />
     <br/>
     <br/>
