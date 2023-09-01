@@ -1,12 +1,11 @@
 import React from 'react';
 import Search from './components/Search.jsx';
 import './App.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import Routes from './Routes.jsx'
 import Loja from './pages/Loja/loja'
 import Home from './pages/Home/home'
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 
 function App() {
@@ -14,7 +13,7 @@ function App() {
   return (
 
     <>
-     
+
       <div>
         <header>
           <div className="header">
