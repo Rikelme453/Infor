@@ -1,24 +1,20 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-body{
+body {
     padding: 0;
     margin: 0;
 }
 
-.header{
+.header {
     background-color: #0066ff;
     height: 12vh;
     margin-top: -0.5vh;
 }
 
-#navbar{
-    z-index: 1;
-}
-
-#navText{
+#navText {
     display: block;
     font-size: 2em;
     margin-block-start: 0.05em;
@@ -35,7 +31,7 @@ body{
 
 }
 
-.Search-bar{
+.Search-bar {
     position: absolute;
     padding: 10px 5px;
     border-radius: 5px;
@@ -50,15 +46,15 @@ body{
 
 
 
-.navPg{
+.navPg {
     color: white;
     position: absolute;
     margin-left: 66%;
     font-family: Muli, sans-serif;
     margin-top: 1.75%;
-} 
+}
 
-#lupa{
+#lupa {
     margin-left: 57%;
     cursor: pointer;
     z-index: 2;
@@ -67,23 +63,24 @@ body{
     z-index: 41;
 
 }
-#cart{
+
+#cart {
     margin-left: 80%;
     cursor: pointer;
     z-index: 2;
     position: absolute;
-    color: #ffffff; 
+    color: #ffffff;
     font-size: 35px;
 }
 
-#user{
+#user {
     position: absolute;
     margin-left: 63%;
     font-size: 40px;
     color: white;
 }
 
-#cat{
+#cat {
     position: relative;
     display: flex;
     justify-content: center;
@@ -92,11 +89,11 @@ body{
     text-decoration: none;
     color: #0D6EFD;
     font-size: 16px;
-    
+
 }
 
 
-.link{
+.link {
     float: left;
     text-align: center;
     position: absolute;
@@ -108,23 +105,27 @@ body{
     padding: 25px;
 
 }
-.link a{
+
+.link a {
     color: white;
     text-decoration: none;
 }
 
-.SubNav{ 
+.SubNav {
     position: absolute;
     width: 100%;
-    height: 50px; 
+    height: 50px;
     background-color: #ffffff;
-     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); 
-     display: flex;
-     z-index: -10;
-     
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+
 }
 
-.SubNav a{
+.SubNav1 {
+    z-index: -1;
+}
+
+.SubNav a {
     position: relative;
     display: flex;
     justify-content: center;
@@ -137,15 +138,15 @@ body{
     z-index: 1;
     font-family: Muli, sans-serif;
 
-    
+
 }
 
-.lupa{
+.lupa {
     width: 70%;
     height: 70%;
 }
 
-.lupa_div{
+.lupa_div {
     position: relative;
     left: 58.5%;
     top: 4.5vh;
@@ -155,4 +156,15 @@ body{
     background-color: #ffffff;
     width: 2%;
     cursor: pointer;
+}
+
+.Body-claro {
+    transition: background-color 0.3s ease-in-out;
+    background-color: #fff;
+    height: 100vh;
+}
+
+.Body-escuro {
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
 }

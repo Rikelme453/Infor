@@ -1,34 +1,34 @@
 import React, { useEffect, useState, useRef } from "react";
 import './Search.css';
 
-function Search() {
+function Search({ onClick }) {
   const url = 'http://127.0.0.1:8000/api/produtos/';
 
   const [data, setData] = useState([]);
   const [text, setText] = useState('');
   const [filtName, setFiltName] = useState('');
-  const [showSuggestions, setShowSuggestions] = useState(false); // Adicionado estado para controlar a exibição das sugestões
+  const [showSuggestions, setShowSuggestions] = useState(false);
 
-  const searchWrapperRef = useRef(null); // Referência para o wrapper da busca
+  const searchWrapperRef = useRef(null);
 
   useEffect(() => {
     fetchData();
   }, [text]);
 
   useEffect(() => {
-    // Adiciona um event listener para capturar cliques fora da área de sugestões
     function handleClickOutside(event) {
       if (searchWrapperRef.current && !searchWrapperRef.current.contains(event.target)) {
         setShowSuggestions(false);
+        onClick();
       }
     }
 
     document.addEventListener("mousedown", handleClickOutside);
-    
+
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []);
+  }, [onClick]);
 
   const fetchData = async () => {
     const endpoint = `${url}?nome=${text}`;
@@ -47,21 +47,18 @@ function Search() {
   const searched = (event) => {
     setFiltName(event.target.value);
     setText(event.target.value);
-    setShowSuggestions(true); // Mostra as sugestões ao começar a digitar
+    setShowSuggestions(true);
   };
 
   const handleItemClick = (itemName) => {
     setFiltName(itemName);
-    setShowSuggestions(false); // Fecha as sugestões ao selecionar um item
+    setShowSuggestions(false);
+    onClick(); 
   };
 
   const itensFilt = data.filter(item =>
     item.nome.toLowerCase().includes(filtName.toLowerCase())
   );
-
-  const escurecer = () => {
-    console.log("test");
-  }
 
   return (
     <div className="APP" ref={searchWrapperRef}>
@@ -70,10 +67,10 @@ function Search() {
         placeholder="Procure seus produtos..."
         value={filtName}
         onChange={searched}
-        onClick={escurecer}
+        onClick={onClick}
         className="Search-bar"
       />
-      {showSuggestions && ( // Renderiza a lista de sugestões somente quando showSuggestions for true
+      {showSuggestions && (
         <div className="sugestoes">
           <ul>
             {filtName.length > 0 &&
