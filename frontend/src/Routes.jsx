@@ -1,10 +1,18 @@
 
 import React from 'react'
+import {BrowserRouter , Routes ,Route} from 'react-router-dom'
+import Loja from './pages/Loja/loja'
+import Home from './pages/Home/home'
 
-export default () => {
+export default function () {
+
     return(
-        <Switch>
-
-        </Switch>
+        <BrowserRouter>
+           <Routes>
+             <Route path = "/loja"  element = {<Loja />} />
+             <Route path = "/"  element = {<Home />} />
+           </Routes>
+        </BrowserRouter>
+ 
     );
 }
