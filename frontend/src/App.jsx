@@ -18,7 +18,7 @@ function App() {
       <div>
         <header>
           <div className="header">
-            <a id="navText" className="navbar-brand" href="base.html">INFOR HOME</a>
+            <a id="navText" className="navbar-brand" href="/"  element = {< Home />}>INFOR HOME</a>
             <ul class="suggestions">
               <Search />
               <div className="lupa_div">
