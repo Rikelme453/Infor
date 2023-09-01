@@ -17,7 +17,7 @@ body {
 }
 
 #navbar {
-    z-index: -1;
+    z-index: 1;
 }
 
 #navText {
@@ -127,8 +127,8 @@ body {
      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); 
      display: flex;
      z-index: 1;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
-    display: flex;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+        display: flex;
 }
 .SubNav a {
     position: relative;
@@ -142,6 +142,6 @@ body {
     font-size: 17px;
     z-index: 1;
     font-family: Muli, sans-serif;
-
-
 }
+
+
