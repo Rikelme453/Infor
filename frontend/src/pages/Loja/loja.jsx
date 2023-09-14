@@ -40,12 +40,11 @@ function Loja(){
               <div className='ProdutoDiv'>
                     <ul>
                         
-                     {data && data.map(el => <li key = {el.id}> {el.nome} </li> )}
-             
+                      {data && data.map(el => <li key = {el.id}> {el.nome} </li> )}
+                 
                     </ul>
               </div>
-         </body>      
-              
+         </body>                   
      </div>
     
     </>

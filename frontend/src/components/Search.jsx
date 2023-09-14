@@ -50,11 +50,6 @@ function Search({ onClick }) {
     setShowSuggestions(true);
   };
 
-  const handleItemClick = (itemName) => {
-    setFiltName(itemName);
-    setShowSuggestions(false);
-    onClick(); // Chama a função onClick para remover o escurecimento
-  };
 
   const itensFilt = data.filter(item =>
     item.nome.toLowerCase().includes(filtName.toLowerCase())

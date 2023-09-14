@@ -1,0 +1,8 @@
+from django.test import TestCase
+from django.urls import reverse 
+
+class ProdutoTestCase(TestCase):
+
+    def test_status_code_200(self):
+        resposta = self.client.get(reverse('api_view'))
+        self.assertEquals(resposta.status_code , 200)
