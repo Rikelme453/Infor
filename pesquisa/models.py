@@ -4,7 +4,6 @@ def upload_media(instance , filename):
    return r"(instance.id)-(filename)"".jpg"
 
 class Client(models.Model):
-   user = models.OneToOneField()
    name = models.CharField(max_length=250)
    address = models.CharField(max_length=250,null=True,blank=True)
 
@@ -14,7 +13,7 @@ class Client(models.Model):
 class Category(models.Model):
    title = models.CharField(max_length=250)
    slug = models.SlugField(unique=True)
-
+   
    def __str__(self):
       return self.title
 
