@@ -1,67 +1,23 @@
-import React from 'react';
-import Search from './components/Search.jsx';
-import Footer from './components/footer.jsx';
-import './App.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faCartShopping, faSearch, faUser } from '@fortawesome/free-solid-svg-icons';
-import Routes from './Routes.jsx'
+
+import React from 'react'
+import {BrowserRouter , Routes ,Route} from 'react-router-dom'
 import Loja from './pages/Loja/loja'
 import Home from './pages/Home/home'
+import Cadastro from './pages/Cadastro/Cadastro'
+import Login from './pages/login/Login'
 
 
-function App() {
-
-  return (
-
-    <>
-
-      <div>
-        <header>
-          <div className="header">
-            <a id="navText" className="navbar-brand" href="/" element={< Home />}>INFOR HOME</a>
-            <ul class="suggestions">
-              <Search />
-              <div className="lupa_div">
-
-                <FontAwesomeIcon icon={faSearch} className='lupa' />
-
-              </div>
-
-
-
-            </ul>
-            <FontAwesomeIcon icon={faUser} className='user' />
-            <p class="navPg">Seja Bem-vindo!</p>
-            <div class="link">
-              <a href="#">Entrar |</a>
-              <a href="%">Cadastrar</a>
-            </div>
-            <FontAwesomeIcon icon={faCartShopping} className='cart' />
-          </div>
-          <div className="SubNav">
-            <a href="#">Categorias<FontAwesomeIcon icon={faBars} className='cat' /></a>
-            <a href="#">Carrinho</a>
-            <a href="/loja" element={<Loja />} >loja</a>
-            <a href="#">Contato</a>
-            <a href="#">Quem Somos?</a>
-          </div>
-
-        </header>
-      </div>
-
-    
-    <br />
-    <br/>
-    <br/>
-
-    <Routes />
-    <Footer />
-    </>
-
-
-
-
-  );
-}
 
 export default App;
+    return(
+        <BrowserRouter>
+           <Routes>
+             <Route path = "/loja"  element = {<Loja />} />
+             <Route path = "/"  element = {<Home />} />
+             <Route path = "/cadastro"  element = {<Cadastro />} />
+             <Route path = "/login"  element = {<Login />} />
+           </Routes>
+        </BrowserRouter>
+ 
+    );
+

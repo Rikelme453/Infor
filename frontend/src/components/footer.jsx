@@ -11,15 +11,15 @@ function Footer() {
         <>
             <aside className='aside'></aside>
             <footer>
-                <div class="footer">
-                    <div class="row">
+                <div className="footer">
+                    <div className="row">
                         <a href="#"><i><img src={img} alt="" draggable="false" /></i></a>
                         <a href="#"><i><img src={img2} alt="" draggable="false" /></i></a>
                         <a href="#"><i><img src={img3} alt="" draggable="false" /></i></a>
                         <a href="#"><i><img src={img4} alt="" draggable="false" /></i></a>
                     </div>
 
-                    <div class="row">
+                    <div className="row">
                         <ul>
                             <li><a href="#">Contato</a></li>
                             <li><a href="#">Outros Serviços</a></li>
@@ -29,7 +29,7 @@ function Footer() {
                         </ul>
                     </div>
 
-                    <div class="row">
+                    <div className="row">
                         CME Copyright © 2023 CME - All rights reserved || Designed By: Ruivo
                     </div>
                 </div>
