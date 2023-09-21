@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'pesquisa',
     'rest_framework',
     'corsheaders',
-    'requests'
+    'requests',
     
     
 ]

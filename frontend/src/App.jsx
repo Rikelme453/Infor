@@ -48,12 +48,14 @@ function App() {
 
         </header>
       </div>
-      <br />
-      <br />
-      <br />
 
-      <Routes />
-      <Footer />
+    
+    <br />
+    <br/>
+    <br/>
+
+    <Routes />
+    <Footer />
     </>
 
 

@@ -1,0 +1,10 @@
+body{
+    overflow-x: hidden;
+}
+
+
+.indexImage{
+    margin-top: 10px;
+    width: 1600px;
+    height: 700px;
+}

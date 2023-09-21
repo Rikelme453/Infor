@@ -1,13 +1,12 @@
 import React from 'react'
-
+import indeximage from '../../assets/indexImage.svg'
+import './home.css';
 function Loja(){
    return(
     <>
-        
-     <div>
-         <h1>Página Inicial</h1>
-     </div>
-    
+     <main>
+     <img className ='indexImage' src={indeximage} draggable='false'></img>
+     </main>
     </>
 
    )
