@@ -19,7 +19,8 @@ function Home() {
       <>
          <div>
             <header>
-              <Menu/>
+               <Search />
+               <Menu />
             </header>
          </div>
          <div className="body">
