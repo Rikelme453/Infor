@@ -1,6 +1,9 @@
 import React from 'react'
 import { useEffect, useState } from "react";
 import './loja.css';
+import Footer from '../../components/footer';
+import Search from '../../components/Search';
+import { Menu } from '../../components/Menu';
 
 
 
@@ -35,10 +38,11 @@ function Loja() {
     <>
 
       <div>
-
-        <body>
-          <h1>Página da Loja</h1>
-
+        <header>
+          <Search />
+          <Menu />
+        </header>
+        <body>  
           <section className='produto-section'>
             {data && data.map(el => <div className='ProdutoDiv' key={el.id_produto}>
               <img className='imagem' src={el.image}></img>
@@ -49,7 +53,7 @@ function Loja() {
           </section>
         </body>
       </div>
-
+      <Footer />
     </>
 
   )

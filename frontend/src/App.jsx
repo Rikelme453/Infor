@@ -8,11 +8,11 @@ import Login from './pages/login/Login'
 
 
 
-export default App;
+export default function(){
     return(
         <BrowserRouter>
            <Routes>
-             <Route path = "/loja"  element = {<Loja />} />
+             <Route path = "/loja" element = {<Loja />} />
              <Route path = "/"  element = {<Home />} />
              <Route path = "/cadastro"  element = {<Cadastro />} />
              <Route path = "/login"  element = {<Login />} />
@@ -20,4 +20,5 @@ export default App;
         </BrowserRouter>
  
     );
+  }
 
