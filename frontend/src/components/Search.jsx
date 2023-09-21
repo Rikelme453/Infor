@@ -72,7 +72,7 @@ function Search({ onClick }) {
               itensFilt &&
               itensFilt.map(el => (
                 <li
-                  key={el.id}
+                  key={el.id_produto }
                   onClick={() => handleItemClick(el.nome)}
                   className="listas"
                 >

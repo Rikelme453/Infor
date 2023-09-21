@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 
 
 
-const url =`http://127.0.0.1:8000/`
+const url = 'http://127.0.0.1:8000/api/produtos/';
+
 
 function Loja(){
     const [data, setData] = useState([])
@@ -36,14 +37,11 @@ function Loja(){
               
          <body>
               <h1>Página da Loja</h1>
- 
-              <div className='ProdutoDiv'>
-                    <ul>
-                        
-                      {data && data.map(el => <li key = {el.id}> {el.nome} </li> )}
-                 
-                    </ul>
-              </div>
+               
+                   <section className='produto-section'>
+                      {data && data.map(el => <div className='ProdutoDiv' key = {el.id_produto}>
+                      <img className='imagem' src= {el.image}  ></img><p>{el.nome}</p></div> )}
+                   </section> 
          </body>                   
      </div>
     

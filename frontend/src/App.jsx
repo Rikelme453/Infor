@@ -18,7 +18,7 @@ function App() {
       <div>
         <header>
           <div className="header">
-            <a id="navText" className="navbar-brand" href="/"  element = {< Home />}>INFOR HOME</a>
+            <a id="navText" className="navbar-brand" href="/" element={< Home />}>INFOR HOME</a>
             <ul class="suggestions">
               <Search />
               <div className="lupa_div">
@@ -30,34 +30,34 @@ function App() {
 
 
             </ul>
-            <FontAwesomeIcon icon={faUser} className='user'/>
+            <FontAwesomeIcon icon={faUser} className='user' />
             <p class="navPg">Seja Bem-vindo!</p>
             <div class="link">
               <a href="#">Entrar |</a>
               <a href="%">Cadastrar</a>
             </div>
-            <FontAwesomeIcon icon={faCartShopping} className='cart'/>
+            <FontAwesomeIcon icon={faCartShopping} className='cart' />
           </div>
           <div className="SubNav">
             <a href="#">Categorias<FontAwesomeIcon icon={faBars} className='cat' /></a>
             <a href="#">Carrinho</a>
-            <a href="/loja" element = {<Loja />} >loja</a>
+            <a href="/loja" element={<Loja />} >loja</a>
             <a href="#">Contato</a>
             <a href="#">Quem Somos?</a>
           </div>
 
         </header>
       </div>
-      <Footer />
-    <br />
-    <br/>
-    <br/>
+      <br />
+      <br />
+      <br />
 
-    <Routes />
+      <Routes />
+      <Footer />
     </>
-   
-      
-      
+
+
+
 
   );
 }

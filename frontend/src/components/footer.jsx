@@ -9,7 +9,7 @@ import img4 from '../assets/lin.svg'
 function Footer(){
     return(
             <>
-            
+            <aside className='aside'></aside>
             <footer>
 <div class="footer">
 <div class="row">
