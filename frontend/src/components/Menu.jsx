@@ -8,6 +8,7 @@ import { faBars, faCartShopping, faSearch, faUser } from '@fortawesome/free-soli
 import Login from '../pages/login/Login';
 import Cadastro from '../pages/Cadastro/Cadastro';
 import Loja from '../pages/Loja/loja';
+import Carrinho from '../pages/carrinho/Carrinho';
 
 export const Menu = () => {
 
@@ -31,6 +32,7 @@ export const Menu = () => {
             <button onClick={desaparecer} className={menuHamburguer == 1 ? 'fechar' : 'fehar-sem'}>X</button>
             <div className={menuHamburguer === 0 ? 'Hamburguer' : menuHamburguer === 1 ? 'HamburguerDiv' : 'HamburguerDiv-fechar'}>
                 <p className='saudacao'>Olá USER</p>
+                
             </div>
 
 
@@ -49,11 +51,14 @@ export const Menu = () => {
                     <a href="/login" element={<Login />} >Entrar | </a>
                     <a href="/cadastro" element={<Cadastro />} >Cadastrar</a>
                 </div>
-                <FontAwesomeIcon icon={faCartShopping} className='cart' />
+                <a href="/carrinho" element={<Carrinho />}>
+                    <FontAwesomeIcon icon={faCartShopping} className='cart' />
+                </a>
+
             </div>
             <div className="SubNav">
                 <a href="#" onClick={aparecer}>Categorias<FontAwesomeIcon icon={faBars} className='cat' /></a>
-                <a href="#">Carrinho</a>
+                <a href="/carrinho" element={<Carrinho />}>Carrinho</a>
                 <a href="/loja" element={<Loja />} >loja</a>
                 <a href="#">Contato</a>
                 <a href="#">Quem Somos?</a>
