@@ -47,8 +47,10 @@ function Loja() {
             {data && data.map(el => <div className='ProdutoDiv' key={el.id_produto}>
               <img className='imagem' src={el.image}></img>
 
-              <div className='elementos'><h4 className='Nome'>{el.nome}</h4>
-                <button className='botao-compra'>Comprar</button></div>
+               <h4 className='Nome'>{el.nome}</h4>
+                <button className='botao-compra'>Comprar</button>
+                <button className='valor_compra'>Preço:{el.valor}R$</button>
+                
             </div>)}
           </section>
         </body>

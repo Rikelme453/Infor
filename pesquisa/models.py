@@ -8,8 +8,9 @@ def upload_media(instance , filename):
 class Produto(models.Model):
    id_produto = models.UUIDField(primary_key=True, default=uuid4 , editable = False)
    nome = models.CharField(max_length=255)
-   fab =  models.CharField(max_length=255)
+   fab =  models.CharField(max_length=254)
    quantidade = models.PositiveIntegerField()
+   valor = models.PositiveIntegerField(null = True, default = None)
    image = models.ImageField(upload_to= upload_media, blank = True, null = True)
 
    def __str__(self):
