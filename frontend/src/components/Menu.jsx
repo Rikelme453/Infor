@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Menu.css';
 import App from '../App';
 import Home from '../pages/Home/home';
@@ -10,8 +10,27 @@ import Cadastro from '../pages/Cadastro/Cadastro';
 import Loja from '../pages/Loja/loja';
 
 export const Menu = () => {
+
+    const [menuHamburguer, setMenuHamburguer] = useState(0)
+    const [animacao, setAnimacao] = useState(0)
+
+    const aparecer = () => {
+        setMenuHamburguer(1)
+    }
+
+    const desaparecer = () => {
+        setMenuHamburguer(0)
+    }
+
+
     return (
         <>
+            <button onClick={desaparecer} className={menuHamburguer == 1 ? 'fechar' : 'fehar-sem'}>X</button>
+            <div className={menuHamburguer === 1 ? 'HamburguerDiv' : 'HamburguerDiv HamburguerDiv-fechar'}>
+                <p className='saudacao'>Olá USER</p>
+            </div>
+
+            <div className={menuHamburguer == 1 ? 'overflow' : 'overflow-sem'}></div>
 
             <div className="header">
                 <a id="navText" className="navbar-brand" href="/" element={< Home />}>INFOR HOME</a>
@@ -29,7 +48,7 @@ export const Menu = () => {
                 <FontAwesomeIcon icon={faCartShopping} className='cart' />
             </div>
             <div className="SubNav">
-                <a href="#">Categorias<FontAwesomeIcon icon={faBars} className='cat' /></a>
+                <a href="#" onClick={aparecer}>Categorias<FontAwesomeIcon icon={faBars} className='cat' /></a>
                 <a href="#">Carrinho</a>
                 <a href="/loja" element={<Loja />} >loja</a>
                 <a href="#">Contato</a>
