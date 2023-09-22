@@ -1,11 +1,14 @@
 import React from 'react';
 import Search from '../../components/Search';
 import Footer from '../../components/footer';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faCartShopping, faSearch, faUser } from '@fortawesome/free-solid-svg-icons'
 import './home.css'
 import indeximage from '../../assets/indexImage.svg'
 import indeximage2 from '../../assets/indexImage2.svg'
 import './home.css';
 import { Menu } from '../../components/Menu';
+import CarrosselItens from '../../components/CarrosselItens';
 
 
 function Home() {
@@ -23,6 +26,7 @@ function Home() {
                <img className='indexImage' src={indeximage} draggable='false'></img>
             </main>
          </div>
+         <br></br>
          <div className='container'>
     <div className='textHome'>
     Bem-vindo à InforHome, o seu destino<br></br>definitivo para todas as suas necessidades<br></br>tecnológicas e de casa!<br></br>Estamos empolgados por você estar aqui<br></br>e ansiosos para mostrar tudo o que nossa<br></br>loja tem a oferecer.
@@ -32,8 +36,13 @@ function Home() {
     </div>
     <img src={indeximage2} className='indexImage2'></img>
          </div>
-
-
+         <br></br>
+         <div className='carrossel'>
+            <h1 className='h1Car'>Navegue Pelas Categorias <FontAwesomeIcon icon={faCartShopping} size="sm" style={{color: "#000000",}} /></h1>
+         <CarrosselItens />
+         </div>
+<br></br>
+<br></br>
          <Footer />
       </>
    );
