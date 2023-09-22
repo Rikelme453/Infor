@@ -44,7 +44,7 @@ function Loja() {
         </header>
         <body>  
           <section className='produto-section'>
-            {data && data.map(el => <div className='ProdutoDiv' key={el.id_produto}>
+             {data && data.map(el => <div className='ProdutoDiv' key={el.id_produto}>
               <img className='imagem' src={el.image}></img>
 
                <h4 className='Nome'>{el.nome}</h4>
