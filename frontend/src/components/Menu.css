@@ -161,33 +161,36 @@ body {
     height: 700px;
 }
 
-.HamburguerDiv{
-    overflow-y: hidden;
+.Hamburguer{
+    display: none;
+}
+
+.HamburguerDiv {
     width: 25%;
-    height: 100vh;
+    height: 100%;
     margin: 0;
     padding: 0;
-    position: absolute;
+    position: fixed;
     float: left;
     left: 0;
     z-index: 5;
     background-color: #ffffff;
     animation: aparecer 0.5s;
-
+    overflow-y: hidden; 
 }
 
 .HamburguerDiv-fechar {
-    overflow-y: hidden;
     width: 25%;
+    overflow-y: hidden;
     height: 100vh;
     margin: 0;
     padding: 0;
     position: absolute;
     float: left;
-    left: -27%; 
+    left: -27%;
     z-index: 5;
     background-color: #ffffff;
-    animation: desaparecer 0.5s; 
+    animation: desaparecer 0.5s;
 }
 
 @keyframes desaparecer {
@@ -221,7 +224,7 @@ body {
     0%{
         opacity: 0%;
     }100%{
-        opacity: 70%;
+        opacity: 100%;
     }
 }
 
@@ -229,36 +232,36 @@ body {
     display: none;
 }
 
-.overflow{
+.overflow {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     z-index: 4;
-    position: absolute;
-    background-color: rgb(67, 67, 67);
-    opacity: 70%;
+    background-color: rgba(67, 67, 67, 0.7); /* Use 'rgba' para definir a opacidade corretamente */
+    overflow: hidden;
     animation: aparecer2 0.7s;
-
 }
 
 .overflow-sem{
+    
     display: none;
 }
 
-.fechar{
-    position: relative;
+.fechar {
+    position: fixed; 
+    top: 2%; 
     left: 27%;
-    top: 2%;
     background: none;
     border: none;
     color: white;
     font-size: 2.5em;
-    cursor: pointer;    
-    position: absolute;
+    cursor: pointer;
     z-index: 20;
     transition: 0.4s;
     animation: aparecer2 0.3s;
-
-}   
+}
 
 
 

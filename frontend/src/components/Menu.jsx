@@ -12,25 +12,29 @@ import Loja from '../pages/Loja/loja';
 export const Menu = () => {
 
     const [menuHamburguer, setMenuHamburguer] = useState(0)
-    const [animacao, setAnimacao] = useState(0)
 
     const aparecer = () => {
         setMenuHamburguer(1)
     }
 
     const desaparecer = () => {
-        setMenuHamburguer(0)
+        setMenuHamburguer(2)
     }
 
+    const desaparecer2 = () => {
+        setMenuHamburguer(2)
+    }
 
     return (
         <>
+            <div className="body"></div>
             <button onClick={desaparecer} className={menuHamburguer == 1 ? 'fechar' : 'fehar-sem'}>X</button>
-            <div className={menuHamburguer === 1 ? 'HamburguerDiv' : 'HamburguerDiv HamburguerDiv-fechar'}>
+            <div className={menuHamburguer === 0 ? 'Hamburguer' : menuHamburguer === 1 ? 'HamburguerDiv' : 'HamburguerDiv-fechar'}>
                 <p className='saudacao'>Olá USER</p>
             </div>
 
-            <div className={menuHamburguer == 1 ? 'overflow' : 'overflow-sem'}></div>
+
+            <div className={menuHamburguer == 1 ? 'overflow' : 'overflow-sem'} onClick={desaparecer2}></div>
 
             <div className="header">
                 <a id="navText" className="navbar-brand" href="/" element={< Home />}>INFOR HOME</a>
