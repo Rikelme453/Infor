@@ -12,6 +12,7 @@ const url = 'http://127.0.0.1:8000/api/produtos/';
 
 function Loja() {
   const [data, setData] = useState([])
+  const [filtName, setFiltName] = useState('');
   useEffect(() => {
     fetchData()
 
@@ -42,6 +43,7 @@ function Loja() {
           <Search />
           <Menu />
         </header>
+        
         <body>  
           <section className='produto-section'>
              {data && data.map(el => <div className='ProdutoDiv' key={el.id_produto}>

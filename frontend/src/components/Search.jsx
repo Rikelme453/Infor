@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import './Search.css';
+import '../pages/Loja/loja.css'
 
 function Search({ onClick }) {
   const url = 'http://127.0.0.1:8000/api/produtos/';
@@ -8,6 +9,7 @@ function Search({ onClick }) {
   const [text, setText] = useState('');
   const [filtName, setFiltName] = useState('');
   const [showSuggestions, setShowSuggestions] = useState(false);
+  const[showResultados, setShowResultados] = useState(false)
 
   const searchWrapperRef = useRef(null);
 
@@ -48,6 +50,7 @@ function Search({ onClick }) {
     setFiltName(event.target.value);
     setText(event.target.value);
     setShowSuggestions(true);
+    setShowResultados(true)
   };
 
 
@@ -56,6 +59,7 @@ function Search({ onClick }) {
   );
 
   return (
+    <>
     <div className="APP" ref={searchWrapperRef}>
       <input
         type="text"
@@ -81,8 +85,10 @@ function Search({ onClick }) {
               ))}
           </ul>
         </div>
-      )}
+      )}  
+      
     </div>
+    </>
   );
 }
 
