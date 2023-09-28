@@ -9,6 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+    background-color: #f1f1f1;
 }
 
 .header {
@@ -182,6 +183,7 @@ body {
     background-repeat: no-repeat; 
     background-position-x: 100px;
     background-position-y: 40px;
+    background-color: white;
 }
 
 .textHome {
@@ -200,5 +202,15 @@ body {
 }
 
 
+.h1Car{
+    margin-left: 30px;
+    font-family: sans-serif;
+    padding: 10px;
+    color: #000000;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
 
-
+.carrossel{
+    background-color: white;
+}

@@ -262,9 +262,6 @@ body {
     transition: 0.4s;
     animation: aparecer2 0.3s;
 }
-
-
-
 .fehar-sem{
     display: none;
 }
@@ -286,3 +283,4 @@ body {
     font-size: 1.5em;
 
 }
+
