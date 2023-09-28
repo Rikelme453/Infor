@@ -21,7 +21,7 @@ function Search({ onClick }) {
     function handleClickOutside(event) {
       if (searchWrapperRef.current && !searchWrapperRef.current.contains(event.target)) {
         setShowSuggestions(false);
-        onClick(); // Chama a função onClick para remover o escurecimento
+        onClick(); 
       }
     }
 
@@ -53,6 +53,10 @@ function Search({ onClick }) {
     setShowResultados(true)
   };
 
+  const handleItemClick = (value) => {
+    setFiltName(value);
+    setShowSuggestions(false); 
+  };
 
   const itensFilt = data.filter(item =>
     item.nome.toLowerCase().includes(filtName.toLowerCase())
@@ -76,8 +80,8 @@ function Search({ onClick }) {
               itensFilt &&
               itensFilt.map(el => (
                 <li
-                  key={el.id_produto }
-                  onClick={() => handleItemClick(el.nome)}
+                  key={el.id_produto}
+                  onClick={() => handleItemClick(el.nome)} 
                   className="listas"
                 >
                   {el.nome}
