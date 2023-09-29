@@ -1,5 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import './Search.css';
+import '../pages/Loja/loja.css'
+import { Menu } from './Menu';
+
 
 function Search({ onClick }) {
   const url = 'http://127.0.0.1:8000/api/produtos/';
@@ -19,8 +22,9 @@ function Search({ onClick }) {
     function handleClickOutside(event) {
       if (searchWrapperRef.current && !searchWrapperRef.current.contains(event.target)) {
         setShowSuggestions(false);
-        onClick(); // Chama a função onClick para remover o escurecimento
+        onClick();
       }
+
     }
 
     document.addEventListener("mousedown", handleClickOutside);
@@ -50,39 +54,69 @@ function Search({ onClick }) {
     setShowSuggestions(true);
   };
 
+  const handleItemClick = (value) => {
+    setFiltName(value);
+    setShowSuggestions(false);
+  };
 
   const itensFilt = data.filter(item =>
     item.nome.toLowerCase().includes(filtName.toLowerCase())
   );
 
   return (
-    <div className="APP" ref={searchWrapperRef}>
-      <input
-        type="text"
-        placeholder="Procure seus produtos..."
-        value={filtName}
-        onChange={searched}
-        onClick={onClick}
-        className="Search-bar"
-      />
-      {showSuggestions && (
-        <div className="sugestoes">
-          <ul>
-            {filtName.length > 0 &&
-              itensFilt &&
-              itensFilt.map(el => (
-                <li
-                  key={el.id_produto }
-                  onClick={() => handleItemClick(el.nome)}
-                  className="listas"
-                >
-                  {el.nome}
-                </li>
-              ))}
-          </ul>
-        </div>
-      )}
-    </div>
+    <>
+      <div className="APP" ref={searchWrapperRef}>
+        <input
+          type="text"
+          placeholder="Procure seus produtos..."
+          value={filtName}
+          onChange={searched}
+          onClick={onClick}
+          className="Search-bar"
+          
+        />
+        {showSuggestions && (
+          <div className="sugestoes">
+            <ul>
+              {filtName.length > 0 &&
+                itensFilt &&
+                itensFilt.map(el => (
+                  <li
+                    key={el.id_produto}
+                    onClick={() => handleItemClick(el.nome)}
+                    className="listas"
+                  >
+                    {el.nome}
+                  </li>
+                ))}
+            </ul>
+          </div>
+        )}
+        <header>
+          <Menu />
+        </header>
+        
+        <body>
+
+            <section className='produto-section'>
+              {
+               itensFilt &&
+               itensFilt.map(el => <div className='ProdutoDiv' key={el.id_produto}>
+                  <img className='imagem' src={el.image}></img>
+
+                  <h4 className='Nome'>{el.nome}</h4>
+                  <button className='botao-compra'>Comprar</button>
+                  <button className='valor_compra'>Preço:{el.valor}R$</button>
+
+                </div>)}
+            </section>
+  
+        </body>
+
+
+      </div>
+
+    </>
   );
 }
 

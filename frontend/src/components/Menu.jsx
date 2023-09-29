@@ -9,6 +9,7 @@ import Login from '../pages/login/Login';
 import Cadastro from '../pages/Cadastro/Cadastro';
 import Loja from '../pages/Loja/loja';
 import Carrinho from '../pages/carrinho/Carrinho';
+import MenuSub from './MenuSub';
 
 export const Menu = () => {
 
@@ -32,6 +33,8 @@ export const Menu = () => {
             <button onClick={desaparecer} className={menuHamburguer == 1 ? 'fechar' : 'fehar-sem'}>X</button>
             <div className={menuHamburguer === 0 ? 'Hamburguer' : menuHamburguer === 1 ? 'HamburguerDiv' : 'HamburguerDiv-fechar'}>
                 <p className='saudacao'>Olá USER</p>
+
+                <MenuSub />
                 
             </div>
 
