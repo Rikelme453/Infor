@@ -19,13 +19,13 @@ const CarrosselItens = () => {
     <div className='carrossel-container'>
       <Carousel 
       showThumbs={false}
-      infiniteLoop={false}
+      infiniteLoop={true}
       showArrows={true}
       centerMode={true}
       centerSlidePercentage={100/7}
       showIndicators={false}
       autoPlay={true}
-      interval={1000}
+      interval={2000}
       showStatus={false}
       stopOnHover={true}
     >

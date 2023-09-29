@@ -20,6 +20,7 @@ function Home() {
                <Search />
                <Menu />
             </header>
+            <br></br>
          </div>
          <div className="body">
             <main>
