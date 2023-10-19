@@ -5,7 +5,7 @@ import { Menu } from './Menu';
 
 
 function Search({ onClick }) {
-  const url = 'http://127.0.0.1:8000/api/produtos/';
+  const url = 'http://127.0.0.1:8000/api/v1produtos/';
 
   const [data, setData] = useState([]);
   const [text, setText] = useState('');

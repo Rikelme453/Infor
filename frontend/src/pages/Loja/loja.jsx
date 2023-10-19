@@ -1,13 +1,12 @@
 import React from 'react'
-import { useEffect, useState } from "react";
-import './loja.css';
+import { useEffect, useState } from "react"
 import Footer from '../../components/footer';
 import Search from '../../components/Search';
 
 
 
 
-const url = 'http://127.0.0.1:8000/api/produtos/';
+const url = 'http://127.0.0.1:8000/api/v1';
 
 
 function Loja() {
@@ -45,8 +44,7 @@ function Loja() {
         </header>
 
         <body>
-        
-
+          
         </body>
       </div>
       <Footer />

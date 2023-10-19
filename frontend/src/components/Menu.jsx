@@ -35,10 +35,7 @@ export const Menu = () => {
                 <p className='saudacao'>Olá USER</p>
 
                 <MenuSub />
-                
             </div>
-
-
             <div className={menuHamburguer == 1 ? 'overflow' : 'overflow-sem'} onClick={desaparecer2}></div>
 
             <div className="header">
@@ -57,7 +54,6 @@ export const Menu = () => {
                 <a href="/carrinho" element={<Carrinho />}>
                     <FontAwesomeIcon icon={faCartShopping} className='cart' />
                 </a>
-
             </div>
             <div className="SubNav">
                 <a href="#" onClick={aparecer}>Categorias<FontAwesomeIcon icon={faBars} className='cat' /></a>

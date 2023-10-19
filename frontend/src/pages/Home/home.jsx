@@ -9,12 +9,14 @@ import indeximage2 from '../../assets/indexImage2.svg'
 import './home.css';
 import { Menu } from '../../components/Menu';
 import CarrosselItens from '../../components/CarrosselItens';
-import { redirect } from 'react-router-dom';
+import { redirect, useNavigate } from 'react-router-dom';
+import Loja from '../Loja/loja';
 
 
 function Home() {
-   function redirecionar(){
-     
+   const navigate = useNavigate()
+   const redirecionar = () => {
+     navigate('/loja')
    }
 
    return (
@@ -27,7 +29,6 @@ function Home() {
                   onClick={redirecionar}
                   className="Search-bar"
                />
-               
                <Menu />
             </header>
          </div>
