@@ -1,5 +1,6 @@
 from django.db import models
 from uuid import uuid4
+from django.contrib.auth.models import AbstractBaseUser, UserManager , PermissionsMixin
 
 
 def upload_media(instance , filename):
@@ -17,12 +18,31 @@ class Produto(models.Model):
    def __str__(self):
       return self.nome
 
-class Usuario(models.Model): 
+class NewUserManager(UserManager):
+
+    def create_user(self,emailUser,nomeUser,senhaUser,idadeUser):
+        """Create a new user profile"""
+        if not emailUser:
+            raise ValueError('Usuário deve ter um email válido')
+        
+        
+        emailUser = self.normalize_email(emailUser) 
+        user = self.model(emailUser = emailUser,nomeUser=nomeUser, senhaUser=senhaUser, idadeUser=idadeUser) 
+        user.save(using=self.db)
+        return user
+        
+class Usuario(AbstractBaseUser, PermissionsMixin): 
       id_user = models.UUIDField(primary_key=True, default=uuid4 , editable = False , )
       nomeUser = models.TextField(max_length=255)
-      emailUser = models.EmailField(max_length=255)
+      emailUser = models.EmailField(max_length=255, unique = True)
       senhaUser = models.CharField(max_length=255)
       idadeUser = models.IntegerField()
+      username =  None 
+
+      objects =  UserManager()
+
+      USERNAME_FIELD = 'emailUser'
+      REQUIRED_FIELDS = ['nomeUser','senhaUser', 'idadeUser']
 
       def __str__(self):
          return self.nomeUser

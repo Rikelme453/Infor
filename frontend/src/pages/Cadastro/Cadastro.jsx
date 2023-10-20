@@ -18,7 +18,7 @@ const Cadastro = () => {
           <header>
           <a id="navText" className="navbar-brand" href="/">INFOR HOME</a>
           </header>
-          <form className="cadastro" method='GET' action='http://localhost:8000/cadastrar/'>
+          <form className="cadastro" method='GET' action='#'>
             <h2>Cadastro</h2>
             <input className='form-control' name='nome' type="name" placeholder='Informe Seu Nome' required /><br />
             <input className='form-control'  name='email' type="email" placeholder='Informe Seu Email' required /><br />

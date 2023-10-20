@@ -6,6 +6,7 @@
     list-style: none;
     cursor: pointer;
     padding: 10px;
+    height: 20px;
 }
 
 .listas:hover {
@@ -36,5 +37,18 @@
     max-height: 150px;
     overflow-y: scroll;
   }
+.produtoSearch{
+    margin-left: 50%;
+    margin-top: 0%;
+    float: right;
+    height: 20px;
+
+}
+.nomeProduto{
+    display: inline-block;
+    height: 20px;
+
+}
+
 
   

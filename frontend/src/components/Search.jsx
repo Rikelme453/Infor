@@ -86,7 +86,7 @@ function Search({ onClick }) {
                     onClick={() => handleItemClick(el.nome)}
                     className="listas"
                   >
-                    {el.nome}
+                    <div className="nomeProduto">{el.nome}</div> <div className="produtoSearch"><img src={el.image}  height="25px"/></div>
                   </li>
                 ))}
             </ul>

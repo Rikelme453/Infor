@@ -18,7 +18,7 @@ const Cadastro = () => {
           <header>
           <a id="navText" className="navbar-brand" href="/">INFOR HOME</a>
           </header>
-          <form className="login" method='POST' >
+          <form className="login" method='POST' action='#'>
             <br /><br /><br />
             <h2>Login</h2>
             <input id="input" className='form-control-sm form-control-lg' type="email" placeholder='Informe Seu Email' /><br /><br />
