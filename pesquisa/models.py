@@ -6,7 +6,7 @@ def upload_media(instance , filename):
    return f"(instance.id_produto)-(filename)"".jpg"
 
 class Produto(models.Model):
-   id_produto = models.UUIDField(primary_key=True, default=uuid4 , editable = False)
+   id_produto = models.UUIDField(primary_key=True, default=uuid4)
    nome = models.CharField(max_length=255)
    fab =  models.CharField(max_length=254)
    quantidade = models.PositiveIntegerField()

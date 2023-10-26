@@ -4,3 +4,4 @@ from .models import Usuario
 
 admin.site.register(Produto)
 admin.site.register(Usuario)
+

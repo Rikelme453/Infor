@@ -20,5 +20,4 @@ def users(request):
    return Response(serialized_users.data , status=status.HTTP_201_CREATED)"""
 
 def view_test(request): 
-   return HttpResponse('Bom dia?')
-
+   return HttpResponse('Bom dia?') 
