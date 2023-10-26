@@ -1,7 +1,6 @@
 from django.db import models
 from uuid import uuid4
-from django.contrib.auth.models import AbstractBaseUser, UserManager , PermissionsMixin
-
+from django.contrib.auth.models import AbstractBaseUser, UserManager 
 
 def upload_media(instance , filename):
    return f"(instance.id_produto)-(filename)"".jpg"
@@ -31,7 +30,7 @@ class NewUserManager(UserManager):
         user.save(using=self.db)
         return user
         
-class Usuario(AbstractBaseUser, PermissionsMixin): 
+class Usuario(models.Model): 
       id_user = models.UUIDField(primary_key=True, default=uuid4 , editable = False , )
       nomeUser = models.TextField(max_length=255)
       emailUser = models.EmailField(max_length=255, unique = True)

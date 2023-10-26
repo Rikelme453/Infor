@@ -96,7 +96,7 @@ function Search({ onClick }) {
           <Menu />
         </header>
         
-        <body>
+
 
             <section className='produto-section'>
               {
@@ -111,7 +111,6 @@ function Search({ onClick }) {
                 </div>)}
             </section>
   
-        </body>
 
 
       </div>

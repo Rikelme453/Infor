@@ -42,10 +42,7 @@ function Loja() {
     
           <Search />
         </header>
-
-        <body>
-          
-        </body>
+      
       </div>
       <Footer />
     </>
